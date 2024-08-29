@@ -82,15 +82,19 @@ const caixaPrincipal = document.querySelector(".caixa-principal");
         }
     
     function respostaSelecionada(opcaoSelecionada) {
-        const afirmacoes = opcaoSelecionada.afirmação;
+        const afirmacoes = (opcaoSelecionada.afirmação);
         historiaFinal = afirmacoes + " ";
         atual++;
         mostraPergunta();
     }
 
     function mostraResultado() {
+        function aleatorio (lista){
+        const posicao = Math.random()*lista.length;
+        return lista[posicao];
+        }
         caixaPerguntas.textContent = "Em 2049...";
         textoResultado.textContent = historiaFinal;
         caixaAlternativas.textContent = "";
     }
-    mostraPergunta();
+     mostraPergunta();
